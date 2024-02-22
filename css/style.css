@@ -1,0 +1,227 @@
+/*font face Nunito*/
+@font-face{
+	font-family: 'nunito';
+	src: url(../fonts/Nunito/Nunito-VariableFont_wght.ttf);
+}
+
+*::selection{
+	background: seagreen;
+	color: #fff;
+}
+
+:root{
+	--vert: seagreen;
+	--noir: #444;
+}
+
+*{
+	margin: 0; padding:0 ;
+	outline: none;
+	list-style: none;
+	font-family: nunito;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	transition: all .3s linear;
+}
+
+html,
+body{
+	font-size: 65%;
+	background: #d3d0cb;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+}
+
+a:hover{
+	color: seagreen;
+}
+
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 95vw;
+	position: fixed;
+	color: #fff;
+	background: #333;
+	font-size: 2rem;
+	padding: 2rem;
+	box-shadow: 0px 0px 2px 6px #333;
+}
+
+header .logo{
+	margin-left: 2.8rem;
+}
+
+header .vert{
+	color: seagreen;
+}
+
+header ul{
+	display: flex;
+	gap: 2rem;
+}
+
+header ul li:hover{
+	cursor: pointer;
+	color: var(--vert);
+	border-bottom: 1px solid var(--vert);
+	font-size: 2.1rem;
+}
+
+header .srch{
+	display: flex;
+	align-items: center;
+}
+
+
+header .srch input[type="search"]{
+	border: none;
+	padding: 1.2rem;
+	border-radius: 2rem;
+}
+
+header .srch button[type="submit"]{
+	padding: .5rem;
+	border-radius: .5rem;
+	font-size: 1.8rem;
+	position: absolute;
+	right: 3%;
+	border: none;
+	background: #fff;
+}
+
+header .srch button[type="submit"]:hover{
+	cursor: pointer;
+	color: green;
+}
+
+
+
+header .srch input::placeholder{
+	font-style: italic;
+	font-size: 1.6rem;
+	color:#555 ;
+}
+
+
+
+
+header .fa-bars{
+	display: none;
+}
+
+main .home{
+	padding: 20% 5rem 0;
+}
+
+main .home .descri{
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+	gap: 6rem;
+}
+
+main .home .descri h2{
+	width: fit-content;
+	border-bottom-left-radius: .5rem;
+	padding: 1.3rem;
+	border-bottom: 4px solid seagreen;
+	border-left: 4px solid seagreen;
+	font-size: 5rem;
+	color: black;
+}
+
+main .home .descri p{
+	font-size: 1.8rem;
+	color: #444;
+}
+
+main .about{
+	padding: 14% 45% 0;
+}
+
+main .about .punch{
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+	gap: 6rem;
+}
+
+main .about .punch h2{
+	width: fit-content;
+	border-bottom-right-radius: .5rem;
+	align-self: flex-end;
+	padding: 1.3rem;
+	border-bottom: 4px solid seagreen;
+	border-right: 4px solid seagreen;
+	font-size: 5rem;
+	color: black;
+}
+
+main .about .punch p{
+	font-size: 1.8rem;
+	color: #444;
+}
+
+main .howItWorks{
+	padding: 15% 5rem 0;
+}
+
+main .howItWorks .fonctionnement{
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+	gap: 6rem;
+}
+
+main .howItWorks .fonctionnement h2{
+	width: fit-content;
+	border-bottom-left-radius: .5rem;
+	padding: 1.3rem;
+	border-bottom: 4px solid seagreen;
+	border-left: 4px solid seagreen;
+	font-size: 5rem;
+	color: black;
+}
+
+main .howItWorks .fonctionnement p{
+	font-size: 1.8rem;
+	color: #444;
+}
+
+main .ourTeams{
+	padding: 12%;
+}
+
+main .ourTeams .nous h2{
+	width: fit-content;
+	border-bottom: 4px solid seagreen;
+	margin: 1% auto;
+	font-size: 5rem;
+	padding: 1.3rem;
+}
+
+main .ourTeams .nous .teammates{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 4rem 0;
+	gap: 4rem;
+}
+
+main .ourTeams .nous .teammates img{
+	border-radius: 50%;
+}
+
+footer{
+	text-align: center;
+	padding: 2rem;
+}
+
+footer p{
+	font-size: 1.4rem;
+	color: #555;
+}
