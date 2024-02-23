@@ -41,7 +41,7 @@ a:hover{
 
 header{
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	width: 95vw;
 	position: fixed;
@@ -49,6 +49,7 @@ header{
 	background: #333;
 	font-size: 2rem;
 	padding: 2rem;
+	z-index: 9999;
 	box-shadow: 0px 0px 2px 6px #333;
 }
 
@@ -89,7 +90,7 @@ header .srch button[type="submit"]{
 	border-radius: .5rem;
 	font-size: 1.8rem;
 	position: absolute;
-	right: 3%;
+	right: 9%;
 	border: none;
 	background: #fff;
 }
@@ -141,7 +142,7 @@ main .home .descri p{
 }
 
 main .about{
-	padding: 14% 45% 0;
+	padding: 14% 60% 0;
 }
 
 main .about .punch{
