@@ -25,16 +25,18 @@
 				<li><a href="#home">Home</a></li>
 				<li><a href="#about">About</a></li>
 				<li><a href="#howItWorks">How It works</a></li>
-				<li><a href="#ourTeams">Our teams</a></li>
+				<li><a href="#feedback">Feedbacks</a></li>
 			</ul>
 		</nav>
 
-		<div class="srch">
-			<input type="search" placeholder=" _search here..">
-			<button type="submit"><i class="fas fa-search"></i></button>
+		<div class="fullScreen">
+			<button onclick="" title="Mettre en plein écran">
+				<p>plein écran</p>
+				<i class="fas fa-expand"></i>
+			</button>
 		</div>
 
-		<!-- barre avec des screens plus petits pour le menu -->
+		<!-- barre avec des screens plus petits pour le menu déroulant-->
 		<i class="fas fa-bars"></i>
 	</header>
 
@@ -49,9 +51,9 @@
 
 			<section class="home" id="home">
 
-				<div class="descri" data-aos="zoom-in-right" data-aos-duration="1300">
-					<h2>What is University Chatbot ?</h2>
-					<p>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Minus non sequi blanditiis, repellendus, nemo tempora quod rem inventore? Nobis non qui, ad? Veniam placeat, quo nobis vero perspiciatis eius, suscipit molestias, natus, dolore numquam fuga odit expedita quae consequuntur et.</p>
+				<div class="descri" data-aos="zoom-out-right" data-aos-duration="1100">
+					<h2 title="C'est un Chatbot qui guide les nouveaux bacheliers à mieux choisir leur Université">What is University Chatbot ?</h2>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Excepturi doloremque totam rem omnis sit reprehenderit, minima similique? Omnis mollitia eos, itaque vel iusto labore, voluptate, maiores blanditiis, molestiae a iure.</p>
 				</div>
 
 			</section>
@@ -62,7 +64,7 @@
 
 			<section class="about" id="about">
 				
-				<div class="punch" data-aos="zoom-out-left" data-aos-duration="1300">
+				<div class="punch" data-aos="zoom-out-left" data-aos-duration="1100">
 
 					<h2>About us</h2>
 					<p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Qui quibusdam ducimus rem fugiat! Quibusdam eius ipsam repudiandae distinctio architecto quam quis, exercitationem quos assumenda incidunt eum id atque, ex quo.</p>
@@ -88,28 +90,41 @@
 
 		<!-- fin section how it works -->
 
-		<!-- debut section our teams -->
+		<!-- debut section feedback-->
 
-			<section class="ourTeams" id="ourTeams" data-aos="">
+			<section class="feedback" id="feedback">
 				
-				<div class="nous">
-					
-					<h2>Our Teams</h2>
-					<div class="teammates">
-						<img src="img/logoNoir.png" alt="" width="160px" height="160px">
-						<img src="img/logoNoir.png" alt="" width="160px" height="160px">
-						<img src="img/logoNoir.png" alt="" width="160px" height="160px">
-						<img src="img/logoNoir.png" alt="" width="160px" height="160px">
-						<img src="img/logoNoir.png" alt="" width="160px" height="160px">
-						<img src="img/logoNoir.png" alt="" width="160px" height="160px">
-						<img src="img/logoNoir.png" alt="" width="160px" height="160px">
-					</div>
+				<div class="feed" data-aos="zoom-out-left" data-aos-duration="1100">
 
+					<h2>Feedback</h2>
+					<p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Qui quibusdam ducimus rem fugiat! Quibusdam eius ipsam repudiandae distinctio architecto quam quis, exercitationem quos assumenda incidunt eum id atque, ex quo.</p>
+					
 				</div>
+
+				<form action="" onsubmit="validateForm()" data-aos="zoom-out-right" data-aos-duration="1100">
+					<div class="inputNom">
+						<label for="nom">Votre nom </label>
+						<input type="text" id="nom">
+					</div>
+					<div class="inputPrenom">
+						<label for="prenom">Votre prénom</label>
+						<input type="text" id="prenom">
+					</div>
+					<div class="inputEmail">
+						<label for="mail">Email</label>
+						<input type="email" id="mail">
+					</div>
+					<div class="textarea">
+						<label for="commentaire">Votre commentaire..</label>
+						<textarea id="commentaire" rows="5"></textarea>
+					</div>
+					<button type="submit">Envoyer</button>
+
+				</form>
 
 			</section>
 
-		<!-- fin section our teams -->
+		<!-- fin section feedback -->
 
 	</main>
 
@@ -128,12 +143,17 @@
 <!-- lien chatbot BOTPRESS -->
 <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
 <script src="https://mediafiles.botpress.cloud/8e0c5d4a-e686-4a25-9941-a5821ae0afd9/webchat/config.js" defer></script>
+
 <!-- lien vers script fontawesome -->
 <script src="fontawesome/js/all.js"></script>
 <!-- lien vers le script interne -->
+
 <script src="js/script.js"></script>
+
+<!-- lien script animation onscroll -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+<!-- initialisation script AOS -->
 <script>
 	AOS.init();
 </script>
