@@ -29,15 +29,8 @@
 			</ul>
 		</nav>
 
-		<div class="fullScreen">
-			<button onclick="" title="Mettre en plein écran">
-				<p>plein écran</p>
-				<i class="fas fa-expand"></i>
-			</button>
-		</div>
-
 		<!-- barre avec des screens plus petits pour le menu déroulant-->
-		<i class="fas fa-bars"></i>
+		<i class="fas fa-bars" onclick="show()"></i>
 	</header>
 
 <!-- fin en-tete de la page -->
@@ -51,7 +44,7 @@
 
 			<section class="home" id="home">
 
-				<div class="descri" data-aos="zoom-out-right" data-aos-duration="1100">
+				<div class="descri" data-aos="zoom-out-right" data-aos-duration="1200">
 					<h2 title="C'est un Chatbot qui guide les nouveaux bacheliers à mieux choisir leur Université">What is University Chatbot ?</h2>
 					<p>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Excepturi doloremque totam rem omnis sit reprehenderit, minima similique? Omnis mollitia eos, itaque vel iusto labore, voluptate, maiores blanditiis, molestiae a iure.</p>
 				</div>
@@ -64,7 +57,7 @@
 
 			<section class="about" id="about">
 				
-				<div class="punch" data-aos="zoom-out-left" data-aos-duration="1100">
+				<div class="punch" data-aos="zoom-out-left" data-aos-duration="1200">
 
 					<h2>About us</h2>
 					<p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Qui quibusdam ducimus rem fugiat! Quibusdam eius ipsam repudiandae distinctio architecto quam quis, exercitationem quos assumenda incidunt eum id atque, ex quo.</p>
@@ -79,7 +72,7 @@
 
 			<section class="howItWorks" id="howItWorks">
 				
-				<div class="fonctionnement" data-aos="zoom-out-right" data-aos-duration="1300">
+				<div class="fonctionnement" data-aos="zoom-out-right" data-aos-duration="1200">
 					
 					<h2>How It Works ?</h2>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quaerat labore laudantium nihil velit fugit laboriosam suscipit, eum libero quibusdam similique aspernatur, iure atque commodi officia cumque. Adipisci suscipit harum, ut odit, nisi dicta vero nostrum quae, reiciendis veritatis temporibus minus commodi at fuga! Inventore, in voluptatem obcaecati harum molestias?</p>
@@ -94,31 +87,31 @@
 
 			<section class="feedback" id="feedback">
 				
-				<div class="feed" data-aos="zoom-out-left" data-aos-duration="1100">
+				<div class="feed" data-aos="zoom-out-left" data-aos-duration="1200">
 
 					<h2>Feedback</h2>
 					<p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Qui quibusdam ducimus rem fugiat! Quibusdam eius ipsam repudiandae distinctio architecto quam quis, exercitationem quos assumenda incidunt eum id atque, ex quo.</p>
 					
 				</div>
 
-				<form action="" onsubmit="validateForm()" data-aos="zoom-out-right" data-aos-duration="1100">
+				<form action="" onsubmit="validateForm()" data-aos="zoom-out-right" data-aos-duration="1200">
 					<div class="inputNom">
-						<label for="nom">Votre nom </label>
-						<input type="text" id="nom">
+						<label for="nom" title="obligatoire">Votre nom <span class="rouge">*</span></label>
+						<input type="text" id="nom" required>
 					</div>
 					<div class="inputPrenom">
-						<label for="prenom">Votre prénom</label>
+						<label for="prenom" title="facultatif">Votre prénom (faculatif)</label>
 						<input type="text" id="prenom">
 					</div>
 					<div class="inputEmail">
-						<label for="mail">Email</label>
-						<input type="email" id="mail">
+						<label for="mail" title="obligatoire">Email <span class="rouge">*</span></label>
+						<input type="email" id="mail" required>
 					</div>
 					<div class="textarea">
-						<label for="commentaire">Votre commentaire..</label>
-						<textarea id="commentaire" rows="5"></textarea>
+						<label for="commentaire" title="obligatoire">Votre commentaire.. <span class="rouge">*</span></label>
+						<textarea id="commentaire" rows="5"></textarea required>
 					</div>
-					<button type="submit">Envoyer</button>
+					<button type="submit" title="envoyer votre avis">Envoyer</button>
 
 				</form>
 

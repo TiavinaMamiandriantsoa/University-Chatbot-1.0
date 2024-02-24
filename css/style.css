@@ -14,6 +14,25 @@
 	--noir: #444;
 }
 
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d3d0cb; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 2.5rem; /* Couleur de la poignée de défilement */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: seagreen; /* Couleur de la poignée de défilement au survol */
+}
+
+
 *{
 	margin: 0; padding:0 ;
 	outline: none;
@@ -39,11 +58,15 @@ a:hover{
 	color: seagreen;
 }
 
+.rouge{
+	color: red;
+}
+
 header{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	width: 95vw;
+	width: 100vw;
 	position: fixed;
 	color: #fff;
 	background: #333;
@@ -54,7 +77,7 @@ header{
 }
 
 header .logo{
-	margin-left: 2.8rem;
+	padding-right: 35%;
 }
 
 header .vert{
@@ -73,51 +96,24 @@ header ul li:hover{
 	font-size: 2.1rem;
 }
 
-header .fullScreen{
-	align-items: center;
-	width: 170px;
-}
-
-header .fullScreen button{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background: #1a8e6c;
-	width: 100%;
-	padding: 1rem;
-	font-size: 1.5rem;
-	font-weight: 600;
-	font-style: italic;
-	border: none;
-	border-radius: .5rem;
-	color: #f5f5f5;
-}
-
-header .fullScreen button:hover{
-	background: seagreen;
-	cursor: pointer;
-	color: #f5f5f5;
-}
-
-
-
 header .fa-bars{
 	display: none;
 }
 
+
 main .home{
-	padding: 15% 5rem 0;
+	padding: 13% 5rem 0;
 }
 
 main .home .descri{
 	display: flex;
 	flex-direction: column;
-	width: 500px;
-	gap: 6rem;
+	width: 600px;
+	gap: 5.8rem;
 }
 
 main .home .descri h2{
-	width: fit-content;
+	width: 460px;
 	border-bottom-left-radius: .5rem;
 	padding: 1.3rem;
 	border-bottom: 4px solid seagreen;
@@ -132,7 +128,9 @@ main .home .descri p{
 }
 
 main .about{
-	padding: 12% 56% 0;
+	display: flex;
+	justify-content: right;
+	padding: 12% 5rem 0;
 }
 
 main .about .punch{
@@ -151,6 +149,7 @@ main .about .punch h2{
 	border-right: 4px solid seagreen;
 	font-size: 5rem;
 	color: black;
+	overflow-y: none;
 }
 
 main .about .punch p{
@@ -158,8 +157,12 @@ main .about .punch p{
 	color: #444;
 }
 
+.howItWorks{
+	overflow: none;
+}
+
 main .howItWorks{
-	padding: 10% 5rem 0 ;
+	padding: 12% 5rem 0 ;
 }
 
 main .howItWorks .fonctionnement{
@@ -186,9 +189,10 @@ main .howItWorks .fonctionnement p{
 
 main .feedback{
 	display: flex;
+/*	flex-wrap: wrap;*/
 	justify-content: space-between;
 	gap: 5rem;
-	padding: 11% 7% ;
+	padding: 12% 5rem ;
 }
 
 main .feedback .feed{
@@ -217,14 +221,15 @@ main .feedback .feed p{
 
 main .feedback form{
 	display: grid;
-	grid-template-areas: 'nom nom prenom'
-						'email email email'
-						'comms comms comms'
-						'bouton bouton bouton';
+	grid-template-areas: 'nom nom prenom prenom'
+						'email email email email'
+						'comms comms comms comms'
+						'bouton bouton bouton bouton';
 	box-shadow: 15px 15px 2px 6px #999;
 	border: 1px solid #888;
 	border-radius: .6rem;
 	padding: 2rem;
+	margin-left: 2.5rem;
 	font-size: 1.2rem;
 	gap: 1.2rem;
 }
@@ -232,6 +237,10 @@ main .feedback form{
 label{
 	font-size: 1.4rem;
 	font-weight: 600;
+}
+
+input:focus, textarea:focus{
+	border: 1px solid seagreen;
 }
 
 input, textarea, button{
@@ -282,4 +291,121 @@ footer{
 footer p{
 	font-size: 1.4rem;
 	color: #555;
+}
+
+
+
+
+
+
+
+/*media queries*/
+
+@media screen and (max-width: 1211px){
+	html,
+	body{
+		font-size: 62.5%;
+	}
+}
+
+@media screen and (max-width: 1015px){
+	html,
+	body{
+		font-size: 60%;
+	}
+}
+
+@media screen and (max-width: 888px){
+	html,
+	body{
+		font-size: 55%;
+	}
+
+	header{
+		justify-content: normal;
+	}
+
+	header .logo{
+		padding-left: 2.5rem;
+	}
+}
+
+@media screen and (max-width: 822px){
+
+	html,
+	body{
+		font-size: 52.5%;
+	}
+
+	header{
+		position: initial;
+		justify-content: space-around;
+	}
+
+	header ul{
+		display: none;
+	}
+
+	header .fa-bars{
+		display: block;
+		font-size: 4rem;
+		padding: 1rem 1.6rem;
+		color: #f5f5f5;
+	}
+
+	header .fa-bars:hover{
+		font-size: 4.1rem;
+		cursor: pointer;
+		color: seagreen;
+	}
+}
+
+@media screen and (max-width: 790px){
+
+	.feedback{	
+		flex-wrap: wrap;
+		margin: .5rem auto;
+		width: 100%;
+		justify-content: center !important;
+	}
+
+	.feedback .feed{
+		padding: .9rem;
+		margin: .1rem auto;
+	}
+
+	.feedback .feed h2{
+		align-self: center !important;
+		border-right: none !important;
+	}
+
+	.feedback form{
+		order: 2;
+	}
+}
+
+@media screen and (max-width:626px){
+
+	*{
+		margin: 0; padding: 0;
+		outline: none;
+	}
+
+	html,
+	body{
+		font-size: 45%;
+	}
+
+	section div h2, section div p{
+		align-self: center !important;
+	}
+
+	section{
+		width: fit-content;
+	}
+
+	h2{
+		border-right: none !important;
+		border-left: none !important;
+	}
 }
