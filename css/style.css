@@ -100,7 +100,6 @@ header .fa-bars{
 	display: none;
 }
 
-
 main .home{
 	overflow: hidden;
 	padding: 13% 5rem 0;
@@ -345,8 +344,30 @@ footer p{
 		justify-content: space-around;
 	}
 
-	header ul{
+	header .navbar{
 		display: none;
+	}
+
+	header .navbar.active{
+		display: initial;
+		position: absolute;
+		top: 14%; left: 0; right: 0;
+		padding: 14rem;
+		background: #999;
+		z-index: 999;
+		backdrop-filter: blur(220px);
+	}
+
+	header .navbar.active ul{
+		text-align: center;
+		font-weight: 600;
+		font-size: 2.7rem;
+		gap: 5rem;
+		flex-direction: column;
+	}
+
+	header .navbar.active ul li a{
+		color: #333;
 	}
 
 	header .fa-bars{

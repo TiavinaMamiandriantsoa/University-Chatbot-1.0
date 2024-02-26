@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- icone du site web -->
 	<link rel="icon" type="image/x-icon" href="../../Téléchargements/University.ico">
 	<!-- lien vers css -->
 	<link rel="stylesheet" href="css/style.css">
@@ -31,7 +32,7 @@
 		</nav>
 
 		<!-- barre avec des screens plus petits pour le menu déroulant-->
-		<i class="fas fa-bars" onclick="show()"></i>
+		<i class="fas fa-bars menu-deroulant"></i>
 	</header>
 
 <!-- fin en-tete de la page -->
@@ -95,10 +96,10 @@
 					
 				</div>
 
-				<form action="" data-aos="zoom-out-right" data-aos-duration="1200">
+				<form action="" data-aos="zoom-out-right" data-aos-duration="1200" onsubmit="validateForm(event)">
 					<div class="inputNom">
 						<label for="nom" title="obligatoire">Votre nom <span class="rouge">*</span></label>
-						<input type="text" id="nom" required>
+						<input type="text" id="nom">
 					</div>
 					<div class="inputPrenom">
 						<label for="prenom" title="facultatif">Votre prénom (faculatif)</label>
@@ -106,13 +107,13 @@
 					</div>
 					<div class="inputEmail">
 						<label for="mail" title="obligatoire">Email <span class="rouge">*</span></label>
-						<input type="email" id="mail" required>
+						<input type="email" id="mail">
 					</div>
 					<div class="textarea">
 						<label for="commentaire" title="obligatoire">Votre commentaire.. <span class="rouge">*</span></label>
-						<textarea id="commentaire" rows="5"></textarea required>
+						<textarea id="commentaire" rows="5"></textarea>
 					</div>
-					<button type="submit" title="Envoyer">Envoyer</button>
+					<button type="submit" title="Envoyer" id="bouton"><i class="fas fa-paper-plane"></i> Envoyer</button>
 
 				</form>
 
