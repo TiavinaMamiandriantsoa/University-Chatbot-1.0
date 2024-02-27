@@ -63,6 +63,13 @@ a:hover{
 	color: red;
 }
 
+.fa-comment-dots{
+	color: #f5f5f5;
+	background-color: seagreen;
+	border-radius: 50%;
+	padding: .6rem;
+}
+
 header{
 	display: flex;
 	justify-content: space-around;
@@ -346,13 +353,16 @@ footer p{
 	}
 
 	header .navbar{
-		display: none;
+		position: absolute;
+		top: -100%;
+		opacity: 0;
 	}
 
 	header .navbar.active{
-		display: initial;
+		display: block;
+		opacity: 1;
 		position: absolute;
-		top: 14%; left: 0; right: 0;
+		top: 17%; left: 0; right: 0;
 		padding: 14rem;
 		background: #999;
 		z-index: 999;
@@ -365,6 +375,15 @@ footer p{
 		font-size: 2.7rem;
 		gap: 5rem;
 		flex-direction: column;
+	}
+
+	header .navbar.active ul li{
+		gap: .5rem;
+	}
+
+
+	header .navbar.active ul li:hover a{
+		color: seagreen;
 	}
 
 	header .navbar.active ul li a{

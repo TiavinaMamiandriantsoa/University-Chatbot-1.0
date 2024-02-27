@@ -1,6 +1,6 @@
 const bouton = document.querySelector("#bouton")
-let bars = document.querySelector(".menu-deroulant")
-let menu = document.querySelector(".navbar")
+let bars = document.querySelector(".menu-deroulant") // bars
+let menu = document.querySelector(".navbar") // navbar
 
 // fonction mamerina @ default value 
 const resetFormStyles = (elements) => {
@@ -15,7 +15,6 @@ const resetFormStyles = (elements) => {
 const validateForm = (event) => {
     try {
         const inputNom = document.querySelector("#nom")
-        const inputPrenom = document.querySelector("#prenom")
         const inputEmail = document.querySelector("#mail")
         const commentaire = document.querySelector("#commentaire")
 
@@ -55,6 +54,6 @@ const validateForm = (event) => {
 
 // menu déroulant pour media queries
 
-bars.addEventListener('click', () => {
-	menu.classList.toggle('active')
-})
+const showNavbar = () => {
+    menu.classList.toggle("active")
+}

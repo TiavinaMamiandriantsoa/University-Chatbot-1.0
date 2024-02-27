@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- icone du site web -->
-	<link rel="icon" type="image/x-icon" href="../../Téléchargements/University (1).ico">
+	<link rel="icon" type="image/x-icon" href="">
 	<!-- lien vers css -->
 	<link rel="stylesheet" href="css/style.css">
 	<!-- lien vers fontawesome -->
@@ -24,15 +24,15 @@
 
 		<nav class="navbar">
 			<ul>
-				<li><a href="#home">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#howItWorks">How It works</a></li>
-				<li><a href="#feedback">Feedbacks</a></li>
+				<li><a href="#home">Accueil</a></li>
+				<li><a href="#about"> Teams</a></li>
+				<li><a href="#howItWorks">Fonctionnement</a></li>
+				<li><a href="#feedback">Feedback</a></li>
 			</ul>
 		</nav>
 
 		<!-- barre avec des screens plus petits pour le menu déroulant-->
-		<i class="fas fa-bars menu-deroulant"></i>
+		<i class="fas fa-bars menu-deroulant" onclick="showNavbar()"></i>
 	</header>
 
 <!-- fin en-tete de la page -->
@@ -47,7 +47,7 @@
 			<section class="home" id="home">
 
 				<div class="descri" data-aos="zoom-out-right" data-aos-duration="1200">
-					<h2 title="C'est un Chatbot qui guide les nouveaux bacheliers à mieux choisir leur Université">What is University Chatbot ?</h2>
+					<h2 title="C'est un Chatbot qui guide les nouveaux bacheliers à mieux choisir leur Université">University Chatbot, c'est quoi ?</h2>
 					<p> Un chatbot est un programme informatique qui peut dialoguer avec des humains, par l’intermédiaire d’un système de chat ou d’un autre canal de communication. Il repose sur une base de messages préenregistrés, et fonctionne comme un répondeur automatique à l’écrit.</p>
 				</div>
 
@@ -61,8 +61,8 @@
 				
 				<div class="punch" data-aos="zoom-out-left" data-aos-duration="1200">
 
-					<h2>About us</h2>
-					<p>Nous sommes un  groupe d'étuduant qui débute dans le monde du développement .</p>
+					<h2>A propos de nous</h2>
+					<p>Nous sommes une groupe d'étudiant, auparavant dans le cas des nouveaux bacheliers, qui ne savent pas comment bien choisir son Université. C'est pour celà qu'on a crée cette application web.</p>
 					
 				</div>
 
@@ -76,8 +76,8 @@
 				
 				<div class="fonctionnement" data-aos="zoom-out-right" data-aos-duration="1200">
 					
-					<h2>How It Works ?</h2>
-					<p>cliquer sur l'îcone <i class="far fa-comment-dots"></i> pour interagir avec le Chatbot. </p>
+					<h2>Comment ça marche ?</h2>
+					<p>Cliquer sur l'îcone <i class="far fa-comment-dots"></i> pour interagir avec le Chatbot. </p>
 
 				</div>
 
@@ -92,11 +92,11 @@
 				<div class="feed" data-aos="zoom-out-left" data-aos-duration="1200">
 
 					<h2>Feedback</h2>
-					<p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Qui quibusdam ducimus rem fugiat! Quibusdam eius ipsam repudiandae distinctio architecto quam quis, exercitationem quos assumenda incidunt eum id atque, ex quo.</p>
+					<p>Veillez à nous donner votre avis après l'utilsation du Chatbot, votre commentaire est très précieuse pour de futur potentiel mise à jour de l'application.</p>
 					
 				</div>
 
-				<form action="" data-aos="zoom-out-right" data-aos-duration="1200" onsubmit="validateForm(event)">
+				<form action="" data-aos="zoom-out-right" data-aos-duration="1200" onsubmit="return validateForm(event)">
 					<div class="inputNom">
 						<label for="nom" title="obligatoire">Votre nom <span class="rouge">*</span></label>
 						<input type="text" id="nom">
@@ -137,8 +137,7 @@
 
 <!-- lien chatbot BOTPRESS -->
 <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-<script src="https://mediafiles.botpress.cloud/8e0c5d4a-e686-4a25-9941-a5821ae0afd9/webchat/config.js" defer></script>config.js" defer></script>
-
+<script src="https://mediafiles.botpress.cloud/8e0c5d4a-e686-4a25-9941-a5821ae0afd9/webchat/config.js" defer></script> 
 <!-- lien vers script fontawesome -->
 <script src="fontawesome/js/all.js"></script>
 <!-- lien vers le script interne -->
