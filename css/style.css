@@ -38,6 +38,7 @@
 	outline: none;
 	list-style: none;
 	font-family: nunito;
+	box-sizing: border-box;
 	overflow-x: hidden;
 	scroll-behavior: smooth;
 	transition: all .3s linear;
